@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-4">
+        <p class="h5">Technology</p>
+        <ul>
+            @for (tech of technology; track tech) {
+                <li>{{ tech }}</li>
+            }    
+        </ul>
+    </div>
+    <div class="col-4">
+        <p class="h5">Languages</p>
+        <ul>
+            @for (lang of languages; track lang) {
+                <li>{{ lang }}</li>
+            }    
+        </ul>
+        <p class="h5">Development Practices</p>
+        <ul>
+            @for (dp of devPractices; track dp){
+                <li>{{ dp }}</li>
+            }
+        </ul>
+    </div>
+    <div class="col-4">
+        <p class="h5">Hobbies</p>
+        <ul>
+            @for(hobby of hobbies; track hobbies){
+                <li>{{hobby.Name}}
+                @if(hobby.Properties){
+                    <ul>
+                        @for(hp of hobby.Properties; track hp){
+                            <li>{{hp}}</li>
+                        }
+                    </ul>
+                }
+                </li>
+            }
+        </ul>
+    </div>
+
+</div>
